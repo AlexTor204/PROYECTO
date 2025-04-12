@@ -1,0 +1,155 @@
+:root {
+    --mainFont: 'Noto Serif', sans-serif;
+
+    --mainColor: #fbf8f4;
+    --secondaryColor: #d6dcd2;
+
+    --supportColor: #694fe4;
+    --support2Color: #e4694f;
+    --black: #000;
+    --white: #FFF;
+    --secondaryShadow: #c5cab4;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+h1, h2, h3 {
+    font-family: var(--mainFont);
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+p {
+    font-size: 1.6rem;
+    font-family: var(--mainFont);
+}
+
+span {
+    color: var(--support2Color);
+}
+
+.header, .footer {
+    background-color: var(--black);
+}
+.header__banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__banner .logo {
+    padding: 2rem;
+}
+.header__banner .logo, .footer__logo .logo {
+    
+    font-size: 2.3rem;
+    text-decoration: none;
+    color: yellow;
+}
+.header__banner .logo b, .footer__logo .logo b {
+    color: var(--white);
+}
+.header__banner__nav {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-family: var(--mainFont);
+}
+
+.header__banner__nav a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--white);
+    justify-content: end;
+}
+
+a.--active {
+    color: yellow;
+}
+.header__banner__nav a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+
+@media (min-width: 458px) {
+    .header__banner__nav a {
+        font-size: 1.7rem;
+    }
+
+    .header__banner .logo, .footer__logo .logo {
+        font-size: 4.5rem;
+    }
+}
+
+/* MAIN */
+h1 {
+    text-align: center;
+}
+.container {
+    max-width: 120rem;
+    height: 100vh;
+    margin: 0 auto;
+}
+img {
+     width: 100%;
+}
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+    .formulario {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.inputVal {
+    width: 100%;
+    margin: 1rem 0;
+}
+.formulario_campo {
+    border: 1rem solid var(--secondaryColor);
+    background-color: transparent;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+.formulario_submit {
+    display: grid;
+    grid-column: 1 / 3 ;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--mainFont), sans-serif;
+    padding: 2rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 2rem;
+}  
+.formulario_submit:hover {
+    cursor: pointer;
+    background-color: var(--secondaryShadow);
+    color: var(--black);
+}
